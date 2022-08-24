@@ -1,0 +1,98 @@
+
+<section class="home-header">
+  <div class="home-header__content">
+    <aside class="home-aside">
+
+      <div class="home-aside__decoration"></div>
+      <div class="home-aside__soc">
+        <div class="home-aside__soc-items">
+          {% for field in this.theme.soc %}
+          <a href="{{ field.link }}" class="soc-item" target="_blank">
+            <img src="{{ field.image | media }}" alt="{{ 'Профили компании'|_ }}"></a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="home-aside__share-icon"></div>
+
+    </aside>
+    <div class="slider-container">
+
+      <div class="slider-text">
+
+        <div class="swiper-wrapper">
+          {% for field in this.theme.landing_1_slider %}
+
+          <div class="swiper-slide slider-text__slide">
+            <div class="slider-text__content">
+              <h2 class="slider-text__heading">{{ attribute(field, 'header_' ~ activeLocale  ) | raw }}</h2>
+              <p class="slider-text__desc">{{attribute(field, 'description_' ~ activeLocale  ) | raw}}</p>
+              <div class="slider__btn-block">
+                <a class="btn btn__more" href="{{ field.button_url }}"><span>{{ 'Більше інформації'|_ }}</span></a>
+                <button data-micromodal-open="modal-1" class="btn ">
+                  <span>{{ 'Замовить звонок'|_ }}</span></button>
+              </div>
+
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+
+      <div class="slider-img">
+
+        <div class="swiper-wrapper">
+          {% for field in this.theme.landing_1_slider %}
+
+          <div class="swiper-slide slider-img__slide">
+            <div class="slider-img__bg" data-swiper-parallax="20%"
+                 style="background-image: url({{ field.image | media | resize(2560, 1440, { mode: 'crop', quality: '80' }) }});"></div>
+          </div>
+
+          {% endfor %}
+
+        </div>
+
+      </div>
+
+      <div class="slider-bottom">
+
+        <div class="slider-share">
+          <div class="slider-share__items">
+            {% for field in this.theme.messenger %}
+            <a href="{{ field.title }}{{ field.link }}" class="soc-item slider-share__item" target="_blank"  alt="{{ 'Связаться'|_ }} {{ field.title }}">
+              <img src="{{ field.image | media }}" alt="{{ 'Связаться'|_ }} {{ field.title }}">
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="slider-pagination">
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="slider-scrollbar">
+          <div class="swiper-scrollbar"></div>
+        </div>
+        <div class="slider-navigation">
+          <div class="slider-navigation__container">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider-pagination-count">
+        <span class="current">01</span> / <span class="total">04</span>
+      </div>
+
+      <div class="slider-pagination-current"><span class="slider-pagination-current__num">01</span><span
+        class="slider-pagination-current__dot">.</span></div>
+
+      <div class="slider-gear"></div>
+
+    </div>
+  </div>
+</section>
+
+
+

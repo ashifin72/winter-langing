@@ -1,0 +1,59 @@
+[viewBag]
+
+[staticMenu]
+code = "footer-menu-1"
+
+[staticMenu staticMenu2]
+code = "footer-menu-2"
+==
+<footer class="footer" itemscope="itemscope"
+		itemtype="http://schema.org/WPFooter"
+		style="background-image: url({{ this.theme.footer_image | media | resize(1200, 250, { mode: 'crop', quality: '80' }) }});">
+
+	<div class="container footer__header">
+		<div class="row">
+			<div class="col-md-4">
+				<a href="/" class="logo">
+      <span class="logo__img-wrapper">
+        <img src="{{this.theme.logo_image | media}}" alt="{{ attribute(this.theme, 'logo_text_' ~ activeLocale  ) }}" class="logo__images">
+      </span>
+					<span class="logo__text">{{ attribute(this.theme, 'logo_text_' ~ activeLocale  ) }}</span>
+				</a>
+
+
+			</div>
+
+			<div class="col-md-4 footer__nav">
+              {% component 'staticMenu' %}
+			</div>
+			<div class="col-md-4 footer__nav">
+              {% component 'staticMenu2' %}
+			</div>
+
+
+		</div>
+
+
+	</div>
+
+	<div class="footer__copyright container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+			1999 - {{ "now"|date("Y")}}  &nbsp; &middot; &nbsp; {{ 'ФОП Ашифін БердянсьВторСервіс'|_ }}
+			</div>
+			<div class="col-md-6">
+				<a href="https://ashifin.com/" target="_blank">{{ 'Разработка Сайта Ashifin.com'|_ }}</a>
+			</div>
+		</div>
+
+
+	</div>
+</footer><!-- #page -->
+{#<script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>#}
+<script src="{{ 'assets/js/theme.min.js' | theme }}"></script>
+	{# Uncomment to view plugins assets for concatenation in app.js scripts & preprocessor styles	#}
+{#	{% framework extras %}#}
+{#        {% scripts %}#}
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+title = "post"
+url = "/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "posts"
+==
+{# Получаем пост и категорию из RainLab.Blog #}
+{% set post = blogPost.post %}
+{% set category = post.categories.first %}
+
+{# Создаем массив хлебных крошек. Также его можно создать в секции кода, кому как удобнее. #}
+{% set breadcrumbs = [
+  {
+    'name':'Головна'|_,
+    'url':"/",
+  },
+  {
+    'name':category.name,
+    'url':"blog"|page()~'/category/'~category.slug,
+  },
+  {
+    'name':post.title
+  }
+] %}
+
+{# Передаем в breadcrumbs.htm массив хлебных крошек и "бросаем" весь этот контент в плейсхолдер который мы создали ранее. #}
+{% put breadcrumbs %}
+{% partial 'breadcrumbs' pages=breadcrumbs %}
+{% endput %}
+<div class="row pt-20 ">
+  <div class="col-md-8">
+
+    <h1>{{ post.title }}</h1>
+    <blockquote>
+     <p>{{ post.excerpt}}</p>
+      <footer>— <cite>{{ 'ФОП Ашифін'|_ }}</cite></footer>
+    </blockquote>
+    <hr>
+    <div class="article__content">
+      {% for image in post.featured_images|slice(0, 1)%}
+        <img src="{{image.path}}" class="article__img" alt="{{ post.title}}">
+      {%  endfor %}
+      {{ post.content_html|raw }}
+
+    </div>
+    <div class="article__footer">
+      <div class="article__views">
+        {{'Дивились'|_}}: {{ post.views }}
+      </div>
+      <div class="article__share">
+        {% partial 'blog/share' %}
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4">
+{% partial 'blog/sidebar' %}
+  </div>
+</div>

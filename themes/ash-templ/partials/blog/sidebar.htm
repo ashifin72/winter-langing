@@ -1,0 +1,21 @@
+[viewBag]
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "category"
+
+[popularPosts]
+category = "{{ :category }}"
+postsLimit = 4
+noPostsMessage = "No posts found"
+postPage = "post"
+==
+<div class="sidebar">
+  <div class="sidebar_widget">
+    {% component 'blogCategories' %}
+  </div>
+  <div class="sidebar_widget">
+    {% component 'popularPosts' %}
+  </div>
+</div>

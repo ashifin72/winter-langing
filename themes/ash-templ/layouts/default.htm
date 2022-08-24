@@ -1,0 +1,36 @@
+[staticPage]
+useContent = 1
+default = 1
+
+[localePicker]
+forceUrl = 0
+
+[Seo]
+includeOpenGraph = 1
+includeTwitter = 1
+includeJsonLd = 1
+==
+<!DOCTYPE html>
+<html lang="{{activeLocale}}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	{% component 'Seo' %}
+	<link rel="icon" href="{{ 'assets/images/favicon.png' | theme }}">
+	<link href="{{ 'assets/css/theme.min.css' | theme }}" rel="stylesheet">
+	{% styles %}
+</head>
+<body>
+{% partial 'header' %}
+
+	<section class="container article">
+		{% placeholder breadcrumbs %}
+
+		{% page %}
+	</section>
+<section class="container home-contact">
+	<h2 class="section__title">{{ 'Контакти'|_ }}</h2>
+	{% partial 'contact' %}
+</section>
+
+{% partial 'footer' %}

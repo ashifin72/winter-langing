@@ -1,0 +1,124 @@
+.article
+  padding-top: $size * 1.5
+  @include media-breakpoint-down(sm)
+    padding-top: $size * 2.5
+  &__img
+    max-width: 100%
+  img
+    max-width: 100%
+
+table
+  width: 100%
+  margin: 40px 0
+
+  th
+    color: #777
+    text-align: left
+    padding: 15px 14px
+    font-size: 16px
+    font-weight: bold
+    border: 1px solid #eaeaea
+
+  td
+    padding: 13px 14px
+    border: 1px solid #eaeaea
+    vertical-align: top
+
+  tr
+    &:nth-of-type(even)
+      background: #fff
+
+    &:nth-of-type(odd)
+      background: #fafafa
+
+.breadcrumbs
+  background: rgba(0, 0, 0, 0.4)
+  margin-bottom: 10px
+  li
+    margin-right: 10px
+//цитаті
+blockquote
+  margin: 0
+  background: white
+  border-top: 5px solid #EAF9F9
+  border-bottom: 5px solid #EAF9F9
+  color: #3A3C55
+  padding: 30px 30px 30px 90px
+  position: relative
+  font-family: 'Lato', sans-serif
+  font-weight: 300
+
+  &:before
+    content: "\201C"
+    font-family: serif
+    position: absolute
+    left: 20px
+    top: 20px
+    color: white
+    background: $accent
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    font-size: 50px
+    line-height: 1.35
+    text-align: center
+
+  p
+    margin: 0 0 16px
+    font-size: 22px
+    letter-spacing: .05em
+    line-height: 1.4
+
+  cite
+    font-style: normal
+
+.breadcrumbs__list
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  margin: 0 auto
+  width: 100%
+  max-width: 1400px
+  padding: 4px 15px
+  list-style: none
+  box-sizing: border-box
+
+.breadcrumbs__sep
+  color: white
+  padding: 0 4px
+  font-size: 11px
+
+.breadcrumbs__link
+  color: white
+  font-size: 12px
+  text-decoration: underline
+
+  &:hover
+    color: white
+    text-decoration: none
+
+.breadcrumbs__name
+  color: white
+  font-size: 12px
+.content
+  &__title
+    font-size: 22px
+    margin-bottom: 20px
+  &__post
+    font-size: 16px
+    h2, h3
+      font-size: 20px
+  &__thumbnail
+    width: 300px
+    height: 200px
+.cat-list
+  h3
+    font-size: 20px
+    text-transform: uppercase
+  .date
+    color: $accent
+    font-size: 12px
+
+
+/*  30 Постраничная навигация
+

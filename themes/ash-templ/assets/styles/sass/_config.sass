@@ -1,0 +1,113 @@
+//colors
+$primary: #025fff
+$success: #2a9924
+$danger: #ea2e41
+$warning: #ffc907
+$dark: #252323
+$deep: #262628
+$text: #333
+$white: #fff
+$text-header: #e8e6e6
+$fon: #e4e4e4
+$fon2: #DECEA6
+$color-menu: #e4e4e4s
+$border: #afacac
+$default-font: "roboto-example", sans-serif
+// USER VARIABLES SECTION
+
+$accent: #04bd65
+$accent2: #F41A02
+// Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+
+$lineheight: 1.65 // Document Line Height
+$userfont: roboto-ash, sans-serif // User Font Family
+$titlefont: raleway-ash, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$size: 75px
+$size-sm: 58px
+$border-opacity: .1
+
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1400px)
+
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+@import 'node_modules/bootstrap/scss/forms'
+
+@import 'node_modules/swiper/swiper-bundle'
+@import "../../../vendor/micromodal/micromodal"
+
+@import 'node_modules/lightgallery.js/dist/css/lightgallery.min'
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('roboto-ash', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('roboto-ash', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('roboto-ash', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('roboto-ash', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('oswald-ash', normal, 700, '../fonts/oswaldbold-webfont.woff2')
+@include font('oswald-ash', normal, 500, '../fonts/oswaldmedium-webfont.woff2')
+@include font('raleway-ash', normal, 800, '../fonts/ralewayextrabold-webfont.woff2')
+@include font('raleway-ash', normal, 500, '../fonts/ralewaymedium-webfont.woff2')
+@include font('raleway-ash', normal, 400, '../fonts/ralewayregular-webfont.woff2')
+@include font('raleway-ash', normal, 600, '../fonts/ralewaysemibold-webfont.woff2')
+@include font('roboto-ash', normal, 500, '../fonts/robotomedium-webfont.woff2')
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	margin: 0
+	padding: 0
+body, html
+	height: 100%
+a
+	text-decoration: none
+	color: $textcolor
+	&:hover, &:focus
+		color: $textcolor
+		text-decoration: none
+.clear
+	clear: both
+	display: block
+	content: " "
+	height: 0
+	visibility: hidden

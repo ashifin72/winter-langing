@@ -1,0 +1,58 @@
+items:
+    -
+        title: 'Покупаем макулатуру'
+        type: blog-post
+        code: ''
+        reference: '2'
+        cmsPage: posts-article
+        viewBag:
+            locale:
+                ru:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Плівка термоусадочна'
+        type: blog-post
+        code: ''
+        reference: '3'
+        cmsPage: posts-article
+        viewBag:
+            locale:
+                ru:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Відходи полістиролу'
+        type: blog-post
+        code: ''
+        reference: '5'
+        cmsPage: posts-article
+        viewBag:
+            locale:
+                ru:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Купуємо ст. пляшку і тарний ящик'
+        type: blog-post
+        code: ''
+        reference: '7'
+        cmsPage: posts-article
+        viewBag:
+            locale:
+                ru:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: footer-menu-1

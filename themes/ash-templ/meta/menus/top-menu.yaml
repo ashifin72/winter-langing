@@ -1,0 +1,83 @@
+items:
+    -
+        title: 'Про нас'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: po-nas
+        cmsPage: null
+        replace: 0
+        viewBag:
+            locale:
+                ru:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: menu-item
+            isExternal: '0'
+    -
+        title: Новини
+        type: url
+        url: /posts/
+        code: ''
+        viewBag:
+            locale:
+                ru:
+                    title: Новости
+                    url: ''
+            isHidden: '0'
+            cssClass: menu-item
+            isExternal: '0'
+    -
+        title: Ціни
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: ceny-na-zakupku
+        cmsPage: null
+        replace: 0
+        viewBag:
+            locale:
+                ru:
+                    title: Цены
+                    url: ''
+            isHidden: '0'
+            cssClass: menu-item
+            isExternal: '0'
+    -
+        title: 'Приймальні пункти'
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: priemnye-punkty
+        cmsPage: null
+        replace: 0
+        viewBag:
+            locale:
+                ru:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: menu-item
+            isExternal: '0'
+    -
+        title: Співпраця
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: stati-zagotivelnikom
+        cmsPage: null
+        replace: 0
+        viewBag:
+            locale:
+                ru:
+                    title: Сотрудничество
+                    url: ''
+            isHidden: '0'
+            cssClass: menu-item
+            isExternal: '0'
+name: top-menu

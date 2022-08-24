@@ -1,0 +1,139 @@
+// Стили header
+.home-header
+  background-color: $deep
+  height: 100%
+  color: $text-header
+  font-family: $titlefont, sans-serif
+  padding-top: $size
+.top-line
+  position: absolute
+  width: 100%
+  height: $size
+  top: 0
+  border-bottom: 1px solid rgba($text-header, $border-opacity*2)
+  background-color: $dark
+  display: flex
+  align-items: center
+  justify-content: space-between
+  z-index: 101
+  box-shadow: 0px 1px 8px #00000070
+  &__phone
+    flex: 0 0 250px
+
+.top-line__fixed
+  position: fixed !important
+.logo
+  flex: 0 0 300px
+  display: flex
+  align-items: center
+  &:hover, &:focus
+    color: $text-header
+    text-decoration: none
+  &__wrapper
+    //width: $size
+    height: $size
+    display: flex
+    flex-direction: column
+    padding: 10px
+  &__title
+    font-size: 20px
+    line-height: 1
+    font-weight: 700
+    text-transform: uppercase
+    a
+      color: $fon2
+  &__desc
+    font-size: 15px
+    color: $dark
+  &__images
+    height: $size *0.8
+  &__text
+    padding-left: 15px
+    font-family: $titlefont, sans-serif
+    color: $fon2
+    text-decoration: none
+    font-size: 12px
+    font-weight: 500
+    letter-spacing: .15em
+
+
+.phone-wrapper
+  display: flex
+  align-items: center
+  //line-height: 1
+  &__ikon
+    width: 20px
+    height: 30px
+    flex: 1
+  &__text
+    display: flex
+    flex-direction: column
+    line-height: 1.6
+    flex: 10
+    padding-left: 15px
+
+  &__phone a
+    font-weight: bold
+    font-family: $userfont, sans-serif
+    color: $text-header
+    text-decoration: none
+    &:hover, &:focus
+      color: $text-header
+      text-decoration: none
+  &__time
+    font-size: 12px
+    color: $fon2
+
+
+
+
+
+
+
+/*==========  Desktop First  ==========*/
+// ≥1400px
++media-breakpoint-down(xxl)
+
+// ≥1200px
++media-breakpoint-down(xl)
+
+// ≥992px
++media-breakpoint-down(lg)
+  .menu-wrapper
+    &__top
+      display: none
+    &__btn
+      display: block
+
+//  ≥768px
++media-breakpoint-down(md)
+  .top-line
+    &__decoration
+      display: none
+
+// ≥576px
++media-breakpoint-down(sm)
+  .logo
+    flex: 0 0 70px
+    width: 300px
+  .menu-mobile ul
+    flex-direction: column
+
+  .top-line
+    flex-direction: column
+    align-items: start
+    height: $size * 2
+    &__phone
+      flex: 100%
+      padding-left: 20px
+      padding-top: 15px
+  .phone-wrapper
+    &__ikon
+      flex: 1
+    &__text
+      display: block
+      .phone-wrapper__time
+        display: block
+        width: 300px
+
+

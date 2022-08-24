@@ -1,0 +1,271 @@
+/*  20 Контактный блок
+.home-contact
+  padding-top: $size
+  h2
+    margin-bottom: $size * 0.5
+.contact-container
+  margin-bottom: $size
+  @include media-breakpoint-down(sm)
+    margin-bottom: $size * 2
+
+.home-contact_form
+  float: left
+  width: 100%
+  margin-right: 4%
+  background: #f4f6fb
+  padding: 30px
+  position: relative
+  //height: 100%
+
+  .form-input
+    display: block
+    width: 100%
+    height: 44px
+    border: 1px solid $border
+    padding: 10px
+    margin-bottom: 20px
+  .textarea
+    height: 150px
+.contact__messengers
+  display: flex
+  padding-left: 25px
+  .messenger-item
+    background: $accent
+    margin-right: 10px
+    width: 50px
+    height: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid rgba(#fff, $border-opacity * 3)
+    img
+      width: 40px
+      height: auto
+      max-height: 40px
+
+.home-contact_map
+  float: left
+  width: 100%
+  height: 50%
+  margin-top: 15px
+  margin-bottom: 36px
+  border: 8px solid #fff
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+
+
+.home-contact_stuff
+  float: left
+  width: 100%
+
+  span
+    display: block
+    margin-bottom: 20px
+    position: relative
+    padding: 11px 10px 11px 60px
+    background: #f4f6fb
+
+.home-contact_phone:after, .home-contact_adress:after, .home-contact_shed:after, .home-contact_mail:after, .home-contact_telegram:after
+  font-family: 'FontAwesome'
+  font-size: 20px
+  width: 48px
+  text-align: center
+  line-height: 46px
+  top: 0
+  left: 0
+  bottom: 0
+  position: absolute
+  z-index: 1
+  background: $accent
+  color: $white
+
+.home-contact_phone:after
+  content: "\f095"
+
+.home-contact_adress:after
+  content: "\f041"
+
+.home-contact_shed:after
+  content: "\f017"
+
+.home-contact_mail:after
+  content: "\f1fa"
+
+.home-contact_telegram:after
+  content: "\f2c6"
+
+.home-contact_phone a, .home-contact_mail a, .home-contact_telegram a
+  text-decoration: none
+  border-bottom: 1px dashed #ccc
+
+/*  21 Контактная форма
+
+input
+  &::placeholder, &:placeholder-shown
+    color: #999
+
+textarea::placeholder
+  color: #999
+
+.home-contact_form
+  p
+    margin: 0
+    display: block
+
+  .wpcf7
+    input
+      font-family: inherit
+      width: 100%
+      float: left
+      padding: 10px
+      display: block
+      margin: 0 0 25px
+      font-size: 16px
+      background: #fff
+      color: #333
+      border: 1px solid rgba(29, 43, 100, 0.15)
+
+    textarea
+      font-family: inherit
+      width: 100%
+      height: 195px
+      float: left
+      padding: 10px
+      display: block
+      margin: 5px 0 25px
+      font-size: 16px
+      background: #fff
+      color: #333
+      border: 1px solid rgba(29, 43, 100, 0.15)
+
+.home-contact_form-title
+  display: block
+  font-size: 18px
+  line-height: 1.25
+  text-align: center
+  margin-bottom: 25px
+  font-weight: 700
+
+p.gp-wpcf7-note
+  font-size: 13px
+  display: block
+  margin: 0
+
+.gp-wpcf7-note
+  #comments-checkbox
+    margin: 5px 15px 15px 0
+    display: inline-block
+
+  a
+    text-decoration: underline
+
+.wpcf7-response-output, .wpcf7-not-valid-tip
+  font-size: 14px !important
+  color: #333
+
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors
+  display: inline-block
+  width: 100%
+  text-align: center
+  margin: 0 auto 20px
+
+.gp_contact-blok
+  margin-bottom: 0
+
+.wpcf7-response-output
+  text-align: center
+  width: 100%
+
+.wpcf7-mail-sent-ok
+  display: inline-block
+
+.home-contact_form .wpcf7 input[type="submit"]
+  display: block
+  text-align: center
+  padding: 10px 18px 10px
+  margin: 0
+  font-size: 16px
+  font-weight: 700
+  position: relative
+  width: 180px
+  border: 0
+  text-decoration: none
+  -webkit-appearance: none
+  box-shadow: none
+  cursor: pointer
+  transition: all .5s ease
+  float: none
+
+  &:focus
+    border: 0
+    outline: 0
+
+.container .wpcf7
+  input
+    font-family: inherit
+    width: 100%
+    float: left
+    padding: 10px
+    display: block
+    border: 1px solid #e1e1e1
+    margin-bottom: 20px
+    color: #333
+    font-size: 17px
+    position: relative
+    z-index: 100
+    background: #fff
+
+  textarea
+    font-family: inherit
+    width: 100%
+    float: left
+    padding: 10px
+    display: block
+    border: 1px solid #e1e1e1
+    margin-bottom: 25px
+    color: #444
+    font-size: 17px
+    position: relative
+    z-index: 100
+    background: #fff
+
+.tax-gp_tovar .wpcf7 input[type="date"]
+  height: 42px
+  line-height: 42px
+  margin-top: 2px
+
+.container
+  .wpcf7 p
+    margin: 0
+
+  .wpcf7-response-output
+    font-size: 13px !important
+
+.wpcf7-not-valid-tip
+  font-size: 13px !important
+
+.container
+  input::placeholder, textarea::placeholder
+    color: #333
+
+  .wpcf7 input[type="submit"]
+    width: 170px
+    vertical-align: top
+    font-size: 16px
+    font-weight: 400
+    letter-spacing: 1px
+    text-align: center
+    text-decoration: none
+    -webkit-appearance: none
+    outline: 0
+    border: 0
+    box-shadow: none
+    cursor: pointer
+    padding: 12px 0
+    margin: 10px 0 0
+    transition: all .5s ease
+    position: relative
+    display: block
+    border-radius: 3px
+    float: none
+    background: $accent
+    color: $white

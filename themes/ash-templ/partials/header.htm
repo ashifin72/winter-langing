@@ -1,0 +1,45 @@
+description = "Default layout"
+
+[viewBag]
+
+[staticMenu]
+code = "top-menu"
+==
+<header class="header">
+	<div class="top-line">
+		<a href="/" class="logo">
+      <span class="logo__img-wrapper">
+        <img src="{{this.theme.logo_image | media}}" alt="{{ attribute(this.theme, 'logo_text_' ~ activeLocale  ) }}" class="logo__images">
+      </span>
+			<span class="logo__text">{{ attribute(this.theme, 'logo_text_' ~ activeLocale  ) }}</span>
+		</a>
+
+		<nav class="top-line__menu">
+			<div class="menu-wrapper">
+				<a href="#" class="menu-wrapper__btn"></a>
+       <div class="menu-wrapper__top">
+	      {% component 'staticMenu' %}
+				 {% component 'localePicker' %}
+      </div>
+			</div>
+		</nav>
+
+		<div class="top-line__phone">
+			<div class="phone-wrapper">
+				<img src="./themes/ash-vtor/assets/images/phone.svg" class="phone-wrapper__ikon" alt="Позвонить">
+				<div class="phone-wrapper__text">
+          <span class="phone-wrapper__phone">
+            <a href="tel:{{this.theme.phone}}">{{this.theme.phone}}</a></span>
+					<span class="phone-wrapper__time">Ежедневно с 9,00 до 20,00</span>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<div class="menu-mobile fade">
+		{% component 'staticMenu' %}
+		{% component 'localePicker' %}
+
+	</div>
+</header>

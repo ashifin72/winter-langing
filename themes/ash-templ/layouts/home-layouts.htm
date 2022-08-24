@@ -1,0 +1,36 @@
+[staticPage]
+useContent = 1
+default = 1
+
+[localePicker]
+forceUrl = 0
+==
+<html lang="{{ activeLocale }}">
+<head>
+  <title>{{ attribute(this.theme, 'home_title_' ~ activeLocale  ) }}</title>
+  <meta name="description" content="{{ attribute(this.theme, 'home_description_' ~ activeLocale  ) }}">
+
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" href="{{ 'assets/images/favicon.png' | theme }}">
+  <link href="{{ 'assets/css/theme.min.css' | theme }}" rel="stylesheet">
+  {% styles %}
+</head>
+<body>
+<p>
+  Switch language to:
+  <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'ua'">UA</a>,
+  <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'ru'">Ru</a>
+</p>
+
+<section class="container home-page">
+  {% page %}
+</section>
+<section class="container home-contact">
+  <h2 class="section__title">{{ 'Контакти'|_ }}</h2>
+
+</section>
+
+
+{% partial 'footer' %}

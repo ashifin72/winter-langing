@@ -1,0 +1,34 @@
+title = "category"
+url = "/category/:slug"
+layout = "off-seo-layout"
+is_hidden = 0
+seo_robots_index = "index"
+seo_robots_follow = "follow"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "category"
+postPage = "post"
+==
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      {% if not category %}
+        <h3>Category not found</h3>
+      {% else %}
+        <h1>{{ category.name }}</h1>
+      {% endif %}
+
+      {% component 'blogPosts' %}
+    </div>
+    <div class="col-md-4">
+      {% partial 'blog/sidebar' %}
+
+    </div>
+  </div>
+</div>

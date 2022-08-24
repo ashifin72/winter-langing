@@ -1,0 +1,22 @@
+{% set index = 1 %}
+<section class="breadcrumbs">
+  <ul class="breadcrumbs__list" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+    {% for page in pages %}
+      {% if not loop.last %}
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+          <a class="breadcrumbs__link" href="{{ page.url }}" itemprop="item">
+            <span class="breadcrumbs__name" itemprop="name">{{ page.name }}</span>
+          </a>
+          <meta itemprop="position" content="{{ index }}">
+        </li>
+        <li class="breadcrumbs__sep"> / </li>
+      {% else %}
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+          <span class="breadcrumbs__name" itemprop="name">{{ page.name }}</span>
+          <meta itemprop="position" content="{{ index }}">
+        </li>
+      {% endif %}
+      {% set index = loop.index + 1 %}
+    {% endfor %}
+  </ul>
+</section>

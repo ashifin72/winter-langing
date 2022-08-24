@@ -1,0 +1,28 @@
+[staticPage]
+useContent = 1
+default = 0
+
+[localePicker]
+forceUrl = 0
+==
+<!DOCTYPE html>
+<html lang="{{activeLocale}}">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="icon" href="{{ 'assets/images/favicon.png' | theme }}">
+	<link href="{{ 'assets/css/theme.min.css' | theme }}" rel="stylesheet">
+
+	{% styles %}
+</head>
+<body>
+{% partial 'header' %}
+
+	<section class="container article">
+		{% placeholder breadcrumbs %}
+
+		{% page %}
+	</section>
+
+{% partial 'footer' %}

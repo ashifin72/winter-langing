@@ -1,0 +1,195 @@
+name: 'Ash-Start'
+description: 'My Theme Description'
+author: 'Ashifin'
+homepage: 'ashifin.com'
+code: ''
+form:
+  tabs:
+    fields:
+      logo_text_ua:
+        label: Компанія
+        span: auto
+        comment: Введіть назву вашої компанії UA
+        tab: Основные
+      logo_text_ru:
+        label: Компания
+        span: auto
+        comment: Введите название вашей компании RU
+        tab: Основные
+
+      logo_image:
+        label: Логотип
+        type: mediafinder
+        mode: image
+        tab: Основные
+        span: auto
+      maps:
+        label: Карта Google Код
+        span: auto
+        tab: Основные
+        type: textarea
+      mail:
+        label: E-Mail
+        span: auto
+        tab: Основные
+      phone:
+        label: Телефон
+        span: auto
+        tab: Основные
+      phone_2:
+        label: Телефон 2
+        span: auto
+        tab: Основные
+      phone_3:
+        label: Телефон 3
+        span: auto
+        tab: Основные
+      address_ua:
+        label: Адрес UA
+        span: auto
+        tab: Основные
+      address_ru:
+        label: Адрес Ru
+        span: auto
+        tab: Основные
+
+      time_ua:
+        label: Время работы UA
+        span: auto
+        tab: Основные
+      weekend_ua:
+        label: Выходной UA
+        span: auto
+        tab: Основные
+      time_ru:
+        label: Время работы Ru
+        span: auto
+        tab: Основные
+      weekend_ru:
+        label: Выходной RU
+        span: auto
+        tab: Основные
+      soc:
+        label: социальніе сети
+        comment: сылки на соц. сети компании
+        type: repeater
+        span: auto
+        tab: Основные
+        form:
+          fields:
+            image:
+              label: логотип соц.сети
+              type: mediafinder
+              mode: image
+              span: auto
+              imageWidth: 100
+            link:
+              label: ссылка на соц, сеть
+              span: auto
+      messenger:
+        label: Месседжеры для связи
+        type: repeater
+        span: auto
+        tab: Основные
+        form:
+          fields:
+            image:
+              label: Логотип
+              type: mediafinder
+              mode: image
+              imageWidth: 100
+            link:
+              label: логин или номер месседжера
+              span: auto
+            title:
+              label: название
+              span: auto
+      footer_image:
+        label: Фоновый рисунок подвала
+        type: mediafinder
+        mode: image
+        tab: Основные
+        span: auto
+      home_title_ua:
+        label: title лендинга UA
+        span: auto
+        tab: Lending на головной
+      home_title_ru:
+        label: title лендинга Ru
+        span: auto
+        tab: Lending на головной
+      home_description_ua:
+        label: Seo описание лендинга UA
+        tab: Lending на головной
+      home_description_ru:
+        label: Seo описание лендинга Ru
+        tab: Lending на головной
+
+      landing_1_slider:
+        label: Слайдер
+        type: repeater
+        tab: Lending на головной
+        form:
+          fields:
+            image:
+              label: Изображение
+              type: mediafinder
+              mode: image
+              span: auto
+            button_url:
+              label: URL кноки подробнее
+              span: auto
+            header_ua:
+              label: Заголовок UA
+              span: auto
+            header_ru:
+              label: Заголовок RU
+              span: auto
+            description_ua:
+              label: Описание UA
+            description_ru:
+              label: Описание RU
+
+      home_about_title_ua:
+        label: Заголовок блока о фирме UA
+        span: auto
+        tab: Lending на головной
+      home_about_title_ru:
+        label: Заголовок блока о фирме RU
+        span: auto
+        tab: Lending на головной
+      home_about_text_ua:
+        label: Текст блока о фирме UA
+        span: auto
+        tab: Lending на головной
+        type: textarea
+      home_about_text_ru:
+        label: Текст блока о фирме RU
+        span: auto
+        tab: Lending на головной
+        type: textarea
+      home_offer_title_ua:
+        label: Заголовок блока покупаем UA
+        span: auto
+        tab: Lending на головной
+      home_offer_title_ru:
+        label: Заголовок блока покупаем RU
+        span: auto
+        tab: Lending на головной
+      home_banner_image:
+        label: Фоновая картинка баннера
+        type: mediafinder
+        mode: image
+        imageWidth: 100
+        tab: Lending на головной
+      home_banner_text_ua:
+        label: Текст банера заказа звонка UA
+        span: auto
+        tab: Lending на головной
+      home_banner_text_ru:
+        label: Текст банера заказа звонка RU
+        span: auto
+        tab: Lending на головной
+
+
+

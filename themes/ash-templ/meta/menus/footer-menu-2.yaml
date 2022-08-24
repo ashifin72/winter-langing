@@ -1,0 +1,60 @@
+items:
+    -
+        title: Новини
+        type: cms-page
+        code: ''
+        reference: posts
+        viewBag:
+            locale:
+                ru:
+                    title: Новости
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Ціни на закупівлю сировини'
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: ceny-na-zakupku
+        replace: 0
+        viewBag:
+            locale:
+                ru:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Про нас'
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: po-nas
+        replace: 0
+        viewBag:
+            locale:
+                ru:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Приймальні пункти'
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: priemnye-punkty
+        replace: 0
+        viewBag:
+            locale:
+                ru:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: footer-menu-2

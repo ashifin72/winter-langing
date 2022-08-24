@@ -1,0 +1,21 @@
+description = "Default layout"
+
+[viewBag]
+
+[Seo]
+includeOpenGraph = 1
+includeTwitter = 1
+includeJsonLd = 1
+==
+<!DOCTYPE html>
+<html lang="{{activeLocale}}">
+<head>
+	{% component 'Seo' %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="google-site-verification" content="YpwqywdNCZgO1cxM7Bj5-bYcO99c3oztYVONF6jHo6c" />
+	<link rel="icon" href="{{ 'assets/images/favicon.png' | theme }}">
+	<link href="{{ 'assets/css/theme.min.css' | theme }}" rel="stylesheet">
+	{% styles %}
+</head>
+<body>

@@ -1,0 +1,27 @@
+title = "blog-posts"
+url = "/posts"
+layout = "off-seo-layout"
+description = "blog"
+meta_title = 123456
+meta_description = 111111111111111
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "category"
+postPage = "post"
+==
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      {% component 'blogPosts' %}
+    </div>
+    <div class="col-md-4">
+      {% partial 'blog/sidebar' %}
+
+    </div>
+  </div>
+</div>

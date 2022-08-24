@@ -1,0 +1,19 @@
+[viewBag]
+==
+<div class="home-banner" id="home_contact"
+     style="background-image: url({{ this.theme.home_banner_image | media | resize(1200, 250, { mode: 'crop', quality: '80' }) }});">
+  <div class="home-banner__content">
+    <h3 class="banner__text">{{ attribute(this.theme, 'home_banner_text_' ~ activeLocale  )| raw }}</h3>
+
+      <form data-request="{{ bannerForm }}::onFormSubmit">
+        {{ form_token() }}
+        <div id="{{ bannerForm }}_forms_flash" class=""></div>
+        <main class="modal__content" id="modal-1-content">
+          <input class="form-input" type="text" name="VH-Phone" placeholder="Ваш телефон..." required>
+        </main>
+        <footer class="modal__footer">
+          <button id="bannerFormSubmitButton" class="btn"><span class="button__text">Отправить</span></button>
+        </footer>
+      </form>
+  </div>
+</div>

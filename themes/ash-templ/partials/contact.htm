@@ -1,0 +1,54 @@
+<div class="row contact-container">
+  <div class="col-md-6">
+    <div class="home-contact_form">
+      <span class="home-contact_form-title">{{ "Для зв'язку з нами використовуйте форму нижче <br> або кнопки месенджерів під формою "|_ }}</span>
+      <form data-request="{{ sliderForm }}::onFormSubmit" class="home-contact_form">
+        {{ form_token() }}
+        <div id="{{ sliderForm }}_forms_flash" class="popup-form-alert"></div>
+        <main class="modal__content" id="modal-1-content">
+          <input class="form-input" type="text" name="VH-Name" placeholder="{{"Ваше им'я..."|_}}">
+          <input class="form-input" type="text" name="VH-Phone" placeholder="{{'Ваш телефон...'|_}}" required>
+          <input class="form-input" type="text" name="VH-Email" placeholder="{{'Ваш Email...'|_}}" required>
+          <textarea class="form-input textarea" name="Message" placeholder="{{'Повідомлення...'|_}}"></textarea>
+        </main>
+        <footer class="modal__footer">
+          <button id="sliderFormSubmitButton" class="btn"><span class="button__text">{{'Відправити'|_}}</span></button>
+        </footer>
+      </form>
+      <div class="clear"></div>
+      <div class="contact__messengers">
+        {% for field in this.theme.messenger %}
+          <a href="{{ field.title }}{{ field.link }}" class="messenger-item" target="_blank"><img src="{{ field.image | media }}" alt="{{ 'Связаться'|_ }} {{ field.title }}"></a>
+        {% endfor %}
+      </div>
+
+    </div><!-- home-contact_form -->
+  </div>
+  <div class="col-md-6">
+    <div class="home-contact_map">
+     {{ this.theme.maps | raw}}
+    </div><!-- home-contact_map -->
+    <div class="home-contact_stuff">
+
+      <span class="home-contact_phone">
+          <a target="_blank" href="tel:{{ this.theme.phone }}">{{ this.theme.phone }}</a>
+          <a href="tel:{{ this.theme.phone_2}}">{{ this.theme.phone_2 }}</a>
+      <a href="tel:{{ this.theme.phone_3}}">{{ this.theme.phone_3 }}</a></span>
+
+
+      {% if (attribute(this.theme, 'address_' ~ activeLocale)) %}
+      <span class="home-contact_adress">{{ attribute(this.theme, 'address_' ~ activeLocale  )| raw }} <?= ash_get_contact_data('home_2'); ?></span>
+      {% endif %}
+
+      {% if (attribute(this.theme, 'time_' ~ activeLocale)) %}
+      <span class="home-contact_shed">{{'Працюємо'|_ }} {{  attribute(this.theme, 'time_' ~ activeLocale) }} {{ attribute(this.theme, 'weekend_' ~ activeLocale) }}</span>
+      {% endif %}
+
+      {% if this.theme.mail %}
+      <span class="home-contact_mail"><a
+                href="mailto:{{ this.theme.mail }}">{{ this.theme.mail }}</a></span>
+      {% endif %}
+
+    </div><!-- home-contact_stuff -->
+  </div>
+</div><!-- end container -->

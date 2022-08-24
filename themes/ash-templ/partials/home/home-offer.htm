@@ -1,0 +1,63 @@
+[viewBag]
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "sirovina-shcho-zakupovuyetsya"
+postsPerPage = 10
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "category"
+postPage = "post"
+==
+{% set posts = blogPosts.posts  %}
+<div class="offer container-fluid">
+  <h2 class="section__title" id="offer">{{ attribute(this.theme, 'home_offer_title_' ~ activeLocale )| raw }}</h2>
+  <div class="offer__wrapper">
+    <div class="swiper-wrapper">
+      {% for post in posts %}
+
+      <div class="swiper-slide">
+        <div class="offer__card">
+
+          <h3 class="offer__title">
+            {{ post.title}}
+          </h3>
+
+          <div class="photo offer__wrapper-img ">
+            {% for image in post.featured_images|slice(0, 1)%}}
+            <img src="{{image.path}}" class="offer__img" alt="{{ post.title}}">
+            {%  endfor %}
+            <div class="glow-wrap">
+              <i class="glow"></i>
+            </div>
+          </div>
+          <div class="offer__desc">
+            {{ post.excerpt}}
+          </div>
+          <a class="btn" href="{{ post.url}}">
+            <span>{{ 'Детальніше'|_ }}</span>
+          </a>
+
+
+        </div>
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+    <div class="offer__nav">
+      <div class="offer__pagination">
+        <div class="offer__swiper-pagination"></div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+</div>

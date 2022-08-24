@@ -1,0 +1,11 @@
+plugin:
+    name: 'ashifin.backmenu::lang.plugin.name'
+    description: 'ashifin.backmenu::lang.plugin.description'
+    author: Ashifin
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Home-land
+        url: 'cms/themeoptions/update/ash-templ'
+        icon: icon-adn

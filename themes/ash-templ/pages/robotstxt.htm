@@ -1,0 +1,17 @@
+title = "robots.txt"
+url = "/robots.txt"
+is_hidden = 0
+seo_robots_index = "index"
+seo_robots_follow = "follow"
+==
+<?php
+function onStart() {
+  $content = $this->page->markup;
+  return Response::make($content)->header('Content-Type', 'text/plain');
+}
+?>
+==
+User-agent: *
+Allow: /
+Host: https://vtor.pp.ua
+Sitemap: https://vtor.pp.ua/sitemap.xml
